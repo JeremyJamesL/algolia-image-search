@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:400,600|Open+Sans:300,400,700&display=swap">
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="font-sans">
+    <div id="modal" class="hidden fixed bg-black/80 h-full w-full items-center justify-center z-10">    
+        <div id="drop-area" class="bg-white absolute rounded p-10">
+            <div class="border-4 border-gray-200 border-dashed h-80 w-80 flex justify-center items-center flex-col">
+                <img src="./images/camera.png" id="drop-image" alt="" class="w-16 h-16 mb-2">
+                <span class="text-slate-500 uppercase text-sm mb-5">Drag and drop your image here</span>
+                <button id="image-search-btn" class="hidden text-slate-500 uppercase text-sm border-4 border-dashed border-gray-200">Search by image</button>
+            </div>
+        </div>
+    </div>
+    <header class="p-16 text-white bg-slate-950">
+        <div class="max-w-4xl m-auto text-center">
+            <img src="./images/Algolia-logo-white.png" alt="algolia logo" class="mb-5 w-32 m-auto"> 
+            <h1 class="font-thin text-4xl mb-10">Search by <i>image</i> with Algolia</h1>
+            <div class="relative">
+                <div id="searchbox">
+                </div>
+                <img src="./images/camera.png" alt="camera icon" id="camera" class="absolute max-w-7 right-2 top-1/2 -translate-y-1/2">
+            </div>
+        </div>
+        <button id="trigger">trigger search</button>
+    </header>
+    <main class="flex gap-10 justify-center py-4">
+        <aside>
+            <div class="border-b-2 border-gray-400">
+                <h2>Filters</h2>
+                <span>Clear filters</span>
+            </div>
+            <div id="refinementList"></div>
+        </aside>
+        <section>
+            <div id="hits"></div>
+        </section>
+    </main>
+
+
+   
+</body>
+</html>
